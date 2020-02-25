@@ -1,14 +1,15 @@
 import discord
+import os
 import random
 from discord.ext import commands
 
-client = commands.Bot(command_prefix = '!')
+client = discord.Client(), commands.Bot(command_prefix = '!')
 
 @client.event
 async def on_ready():
     activity = discord.Activity(name='you, from inside the Snotmobile', type=discord.ActivityType.watching)
     await client.change_presence(activity=activity)
-    print("Hello there!")
+    print('Bot is ready!')
 
 @client.command(aliases=['PING', 'p'])
 async def ping(ctx):
@@ -120,4 +121,5 @@ async def hj(ctx):
 async def say(ctx,*,usertext):
     await ctx.send(f'You told me to say: {usertext}')
 
-client.run('NjgwNDQxMzU4NTY5NTcwMzQ5.XlV_7w.6vgCJXI-lSW5sKFXHvkMnEDrI-A')
+    
+client.run(os.environ['TOKEN'])
