@@ -10,16 +10,6 @@ async def on_ready():
     await client.change_presence(activity=activity)
     print("Hello there!")
 
-@client.command()
-@commands.has_permissions(kick=True)
-async def kick(ctx, member : discord.Member, *, reason=None):
-    await member.kick(reason=reason)
-
-@client.command()
-@commands.has_permissions(ban=True)
-async def ban(ctx, member : discord.Member, *, reason=None):
-    await member.ban(reason=reason)
-
 @client.command(aliases=['PING', 'p'])
 async def ping(ctx):
     embed = discord.Embed(color=discord.Color.blurple())
