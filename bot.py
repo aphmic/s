@@ -120,4 +120,4 @@ async def hj(ctx):
 async def say(ctx,*,usertext):
     await ctx.send(f'You told me to say: {usertext}')
 
-client.run('NjgwNDQxMzU4NTY5NTcwMzQ5.XlAAIA._A5bYhhFqTJOPK9LIfL-3g6vYQw')
+client.run('NjgwNDQxMzU4NTY5NTcwMzQ5.XlV_7w.6vgCJXI-lSW5sKFXHvkMnEDrI-A')
